@@ -24,7 +24,7 @@ import {
 import { MoonIcon, SunIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import Projects from "@/components/Projects/Projects"
+import Projects from "@/components/Projects/Projects";
 import Footer from "@/components/Footer/Footer";
 import Contacts from "@/components/Contacts/Contacts";
 import Education from "@/components/Education/Education";
@@ -44,45 +44,48 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <Projects/>
-        <Education/>
-        <Contacts/>
+        <Projects />
+        <Education />
+        <Contacts />
         <div className="fixed left-0 px-10 md:px-32 w-full z-50 top-20 md:top-14 bg-transparent flex justify-between items-center">
-        <div className="">
-          <a
-            className=" text-xl md:text-3xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-r from-green-500 via-blue-500 to-purple font-bold"
-            href="#home"
-          >
-            Azizul Haque
-          </a>
-        </div>
-        <div className=" text-3xl">
           <div className="">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  className="outline-0 border-0"
-                  variant="default"
-                  size="icon"
-                >
-                  <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                  <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="p-4 border text-sm" align="start">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
-                  Light
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
-                  Dark
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
-                  System
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <a
+              className=" text-xl md:text-3xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-r from-green-500 via-blue-500 to-purple font-bold"
+              href="#home"
+            >
+              AJIJUL ISLAM
+            </a>
           </div>
-        </div>
+          <div className=" text-3xl">
+            <div className="">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    className="outline-0 border-0"
+                    variant="default"
+                    size="icon"
+                  >
+                    <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                    <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  className="p-4 border text-sm"
+                  align="start"
+                >
+                  <DropdownMenuItem onClick={() => setTheme("light")}>
+                    Light
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setTheme("dark")}>
+                    Dark
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setTheme("system")}>
+                    System
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </div>
         </div>
 
         <a

@@ -7,10 +7,9 @@ import { LinkPreview } from "../ui/link-preview";
 import { Button } from "../ui/moving-border-button";
 import Link from "next/link";
 
-
 const Hero = () => {
   return (
-    <div  className="mt-40 lg:mt-32 w-full relative h-full flex flex-col items-center justify-center">
+    <div className="mt-40 lg:mt-32 w-full relative h-full flex flex-col items-center justify-center">
       <div className=" relative flex flex-col items-center justify-center ">
         <div className=" w-[95vw] md:w-[80vw] absolute inset-0 h-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
         <div className="w-[95vw]   md:w-[80vw] relative shadow-xl dark:bg-gray-900 border dark:border-gray-800  px-4 py-10 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
@@ -31,7 +30,7 @@ const Hero = () => {
               <div className="flex items-center justify-center gap-2 my-3">
                 <div>
                   <LinkPreview
-                    url="https://facebook.com"
+                    url="https://www.facebook.com/ajijul.islam.dev"
                     className="font-bold "
                   >
                     <Image
@@ -45,7 +44,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <LinkPreview
-                    url="https://linkedin.com"
+                    url="https://bd.linkedin.com/in/ajijul-islam-dev"
                     className="font-bold "
                   >
                     <Image
@@ -83,7 +82,10 @@ const Hero = () => {
                   </LinkPreview>
                 </div>
                 <div>
-                  <LinkPreview url="https://github.com" className="font-bold ">
+                  <LinkPreview
+                    url="https://github.com/ajijul-islam-dev"
+                    className="font-bold "
+                  >
                     <Image
                       src="/images/github.png"
                       height={40}
@@ -96,8 +98,15 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-10">
-                <Button as={Link} href="#contact" >Get in Touch</Button>
-                <Button as={Link} href="https://drive.google.com/file/d/13z5XKIj5kN-Fb-Y75jO2r4yAxu9WJ2KD/view?usp=drive_link">Get Resume</Button>
+                <Button as={Link} href="#contact">
+                  Get in Touch
+                </Button>
+                <Button
+                  as={Link}
+                  href="https://drive.google.com/file/d/13z5XKIj5kN-Fb-Y75jO2r4yAxu9WJ2KD/view?usp=drive_link"
+                >
+                  Get Resume
+                </Button>
               </div>
             </div>
           </div>
