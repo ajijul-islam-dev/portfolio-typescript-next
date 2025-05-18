@@ -22,7 +22,14 @@ const educationData = [
   },
 ];
 
-const EducationCard = ({ year, degree, institution }) => (
+// ✅ Define the props type
+type EducationItem = {
+  year: string;
+  degree: string;
+  institution: string;
+};
+
+const EducationCard = ({ year, degree, institution }: EducationItem) => (
   <Boxbg className="w-full rounded-lg overflow-hidden">
     <div className="w-full bg-white dark:bg-zinc-900 p-5 rounded-lg shadow-md">
       <h2 className="text-lg font-semibold text-center text-green-500">

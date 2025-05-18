@@ -7,13 +7,25 @@ import { Badge } from "../ui/badge";
 import { FaGithub } from "react-icons/fa";
 import { PiGoogleChromeLogoThin } from "react-icons/pi";
 
-const ProjectCard = ({ project }) => (
+// ✅ Define the Project type
+type Project = {
+  id: number;
+  technologies: string[];
+  name: string;
+  description: string;
+  screenshot: string;
+  live: string;
+  clientRepo: string;
+  serverRepo: string;
+};
+
+const ProjectCard = ({ project }: { project: Project }) => (
   <Card className="rounded-[10px] p-4 bg-white dark:bg-zinc-900 shadow-lg">
     <Image
       src={project.screenshot}
       alt={`${project.name} screenshot`}
-      height="200"
-      width="200"
+      height={200}
+      width={200}
       className="h-56 w-full object-cover rounded-lg"
     />
     <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
@@ -75,7 +87,8 @@ const Prijects = () => {
 
 export default Prijects;
 
-const projects = [
+// ✅ Projects data (already typed correctly)
+const projects: Project[] = [
   {
     id: 1,
     technologies: ["React", "Tailwind", "MongoDB", "Firebase", "Material UI"],
@@ -103,7 +116,7 @@ const projects = [
     technologies: ["React", "Tailwind", "MongoDB", "Firebase", "Material UI"],
     name: "Explore World",
     description:
-      "Explore World is a website offering information about various travel packages and tours in Bangladesh. It features a range of travel options, highlights key destinations, and provides detailed itineraries and pricing. The site helps users explore the cultural and natural beauty of Bangladesh.",
+      "Explore World is a website offering information about various travel packages and tours in Bangladesh. It features a range of travel options, highlights key destinations, and provides detailed itineraries and pricing. The site helps users explore the cultural and natural beauty of Bangladesh. Best Site to Explore The world.",
     screenshot: "/images/projects/explore-world.png",
     live: "https://assignment-10-9a5c8.web.app/",
     clientRepo: "https://github.com/ajijul-islam-5938/explore-world-client.git",
