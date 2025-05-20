@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="w-[95vw]   md:w-[80vw] relative shadow-xl dark:bg-gray-900 border dark:border-gray-800  px-4 py-10 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
           <div className="w-full flex flex-col items-center justify-center">
             <Image
-              src="/images/avatar.webp"
+              src="/images/avatar_2.jpeg"
               height={220}
               width={220}
               alt="avatar"
@@ -44,50 +44,25 @@ const Hero = () => {
                 </div>
                 <div>
                   <LinkPreview
-                    url="https://bd.linkedin.com/in/ajijul-islam-dev"
-                    className="font-bold "
-                  >
-                    <Image
-                      src="/images/linkedin.png"
-                      height={40}
-                      width={40}
-                      alt="avatar"
-                      className="mx-auto  "
-                    />
-                  </LinkPreview>
-                </div>
-                <div>
-                  <LinkPreview url="https://twitter.com" className="font-bold ">
-                    <Image
-                      src="/images/twitter.png"
-                      height={40}
-                      width={40}
-                      alt="avatar"
-                      className="mx-auto  "
-                    />
-                  </LinkPreview>
-                </div>
-                <div>
-                  <LinkPreview
-                    url="https://instagram.com"
-                    className="font-bold "
-                  >
-                    <Image
-                      src="/images/instagram.png"
-                      height={40}
-                      width={40}
-                      alt="avatar"
-                      className="mx-auto  "
-                    />
-                  </LinkPreview>
-                </div>
-                <div>
-                  <LinkPreview
                     url="https://github.com/ajijul-islam-dev"
                     className="font-bold "
                   >
                     <Image
                       src="/images/github.png"
+                      height={40}
+                      width={40}
+                      alt="avatar"
+                      className="mx-auto  "
+                    />
+                  </LinkPreview>
+                </div>
+                <div>
+                  <LinkPreview
+                    url="https://bd.linkedin.com/in/ajijul-islam-dev"
+                    className="font-bold "
+                  >
+                    <Image
+                      src="/images/linkedin.png"
                       height={40}
                       width={40}
                       alt="avatar"
@@ -103,7 +78,7 @@ const Hero = () => {
                 </Button>
                 <Button
                   as={Link}
-                  href="https://drive.google.com/file/d/13z5XKIj5kN-Fb-Y75jO2r4yAxu9WJ2KD/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1fUHeU2opaIC_MMxQUMvxnx3HjNOIdtZm/view?usp=sharing"
                 >
                   Get Resume
                 </Button>

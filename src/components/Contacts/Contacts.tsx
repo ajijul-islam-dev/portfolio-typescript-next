@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import {
   FaFacebook,
   FaFacebookMessenger,
+  FaGithub,
   FaGoogle,
   FaLinkedin,
+  FaMailBulk,
   FaTelegram,
   FaTwitter,
   FaVoicemail,
@@ -13,66 +15,67 @@ import {
 } from "react-icons/fa";
 import { Boxbg } from "../ui/boxBg";
 import { LinkPreview } from "../ui/link-preview";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Contacts = () => {
-    const form:any = useRef();
+  const form: any = useRef();
 
-    const handleMail = (e: any) =>{
-        e.preventDefault();
+  const handleMail = (e: any) => {
+    e.preventDefault();
 
-        emailjs
-      .sendForm(`${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`, form.current, {
-        publicKey: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
-      })
+    emailjs
+      .sendForm(
+        `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`,
+        form.current,
+        {
+          publicKey: `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`,
+        }
+      )
       .then(
         () => {
-           Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Your Message Sent",
-                showConfirmButton: false,
-                timer: 1500
-              });
-              e.target.reset()
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your Message Sent",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          e.target.reset();
         },
         (error) => {
-            Swal.fire({
-                position: "top-end",
-                icon: "error",
-                title: error.message,
-                showConfirmButton: false,
-                timer: 1500
-              });
-
-              
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: error.message,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       );
-
-        
-    }
+  };
   return (
-    <div id='contact' className="w-[90vw] mx-auto my-20">
+    <div id="contact" className="w-[90vw] mx-auto my-20">
       <div className="">
         <SectionTitle title="Contact " />
       </div>
       <div className="grid  md:grid-cols-3 my-16 gap-10">
         <div className="flex flex-col gap-3">
-          <LinkPreview url="https://www.google.com">
+          <LinkPreview url="/">
             <Boxbg>
               {" "}
               <button
                 className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
                 type="submit"
               >
-                <FaFacebook className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                <FaGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Google
+                  ajijulislamdev@gmail.com
                 </span>
               </button>{" "}
             </Boxbg>
           </LinkPreview>
-          <LinkPreview url="https://www.facebook.com">
+          <LinkPreview url="https://www.facebook.com/ajijul.islam.dev">
             <Boxbg>
               {" "}
               <button
@@ -86,7 +89,7 @@ const Contacts = () => {
               </button>{" "}
             </Boxbg>
           </LinkPreview>
-          <LinkPreview url="https://www.facebook.com">
+          <LinkPreview url="hhttps://www.facebook.com/ajijul.islam.dev">
             <Boxbg>
               {" "}
               <button
@@ -100,7 +103,7 @@ const Contacts = () => {
               </button>{" "}
             </Boxbg>
           </LinkPreview>
-          <LinkPreview url="https://www.twitter.com">
+          <LinkPreview url="/">
             <Boxbg>
               {" "}
               <button
@@ -114,7 +117,7 @@ const Contacts = () => {
               </button>{" "}
             </Boxbg>
           </LinkPreview>
-          <LinkPreview url="https://www.whatsapp.com">
+          <LinkPreview url="/">
             <Boxbg>
               {" "}
               <button
@@ -123,26 +126,26 @@ const Contacts = () => {
               >
                 <FaWhatsapp className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  WhatsApp
+                  +880 1320929384
                 </span>
               </button>{" "}
             </Boxbg>
           </LinkPreview>
-          <LinkPreview url="https://www.telegram.com">
+          <LinkPreview url="https://github.com/ajijul-islam-dev">
             <Boxbg>
               {" "}
               <button
                 className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
                 type="submit"
               >
-                <FaTelegram className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+                <FaGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Telegram
+                  Github
                 </span>
               </button>{" "}
             </Boxbg>
           </LinkPreview>
-          <LinkPreview url="https://www.linkedin.com">
+          <LinkPreview url="ttps://bd.linkedin.com/in/ajijul-islam-dev">
             <Boxbg>
               {" "}
               <button
@@ -172,7 +175,7 @@ const Contacts = () => {
               <Boxbg>
                 <input
                   className="w-full p-2.5 rounded-md"
-                 name="user_email"
+                  name="user_email"
                   type="email"
                   placeholder="Enter your Email"
                   required
@@ -205,7 +208,10 @@ const Contacts = () => {
               />
             </Boxbg>
             <Boxbg>
-              <button type="submit" className=" w-full inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <button
+                type="submit"
+                className=" w-full inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+              >
                 Send Email
               </button>
             </Boxbg>

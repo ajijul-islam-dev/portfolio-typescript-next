@@ -4,6 +4,7 @@ import { LightEffect } from "../LightEffect/LightEffect";
 import Image from "next/image";
 import { TextGenerateEffect } from "../ui/text-generate-Effect";
 import { Button } from "../ui/moving-border-button";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -47,7 +48,11 @@ const About = () => {
             difference in the digital world.
           </p>
 
-          <Button className="px-8 py-2 bg-[#0070f3] text-white rounded-md font-light transition duration-200 ease-linear shadow-lg hover:shadow-xl hover:bg-[rgba(0,118,255,0.9)]">
+          <Button
+            as={Link}
+            href="#contact"
+            className="px-8 py-2 bg-[#0070f3] text-white rounded-md font-light transition duration-200 ease-linear shadow-lg hover:shadow-xl hover:bg-[rgba(0,118,255,0.9)]"
+          >
             Hire Me
           </Button>
         </div>
