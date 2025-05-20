@@ -75,7 +75,7 @@ const Prijects = () => {
     <div id="projects" className="my-20 w-[90vw] mx-auto">
       <SectionTitle title="Projects" />
       <div className="my-20">
-        <div className="grid md:grid-cols-3 gap-5 sm:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
